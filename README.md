@@ -33,11 +33,11 @@ pip install pynput
 
 > Use apenas em ambientes de teste e com autorização explícita!
 
-1. Clone este repositório ou copie o código do arquivo `registrador_teclas.py`.
+1. Clone este repositório ou copie o código do arquivo `keylogger.py`.
 2. Execute o script:
 
 ```bash
-python registrador_teclas.py
+python keylogger.py
 ```
 
 3. As teclas pressionadas serão registradas em um arquivo chamado `teclas_pressionadas.txt`.
@@ -48,7 +48,7 @@ python registrador_teclas.py
 
 ```
 keylogger/
-├── registrador_teclas.py
+├── keylogger.py
 ├── teclas_pressionadas.txt (gerado automaticamente)
 └── README.md
 ```
